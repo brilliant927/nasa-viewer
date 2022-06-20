@@ -63,16 +63,12 @@ export default function SearchBar({ onSearch }: IProps) {
       }
       if(year_start) {
         setStartAt(year_start.toString());
-      } else {
-        year_start = '';
-      }
+      } 
       if(year_end) {
         setEndAt(year_end.toString());
-      } else {
-        year_end = '';
-      }
+      } 
       if (q) {
-        searchQueryParam(q as string, year_start as string, year_end as string);
+        searchQueryParam(q as string, year_start as string || '', year_end as string || '');
       }
   }, [q, year_start, year_end, searchQueryParam]);
 
