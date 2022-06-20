@@ -26,7 +26,6 @@ export default function Home() {
   
   return (
     <main className="m-6">
-      <div>learn</div>
       <SearchBar onSearch={handleSearch} />
       <Collections  data-testid="collections" collections={collections} />
        {isLoading && <Spinner isLoading={isLoading}/>}

@@ -42,7 +42,7 @@ export default function SearchBar({ onSearch }: IProps) {
     } else {
       onSearch(q, yeartStart, yearEnd);
     }
-  }, []);  
+  }, [onSearch]);  
   
   const handleSearchButton = () => {
     const year = /^\d{4}$/;
