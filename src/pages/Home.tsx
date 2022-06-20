@@ -1,4 +1,3 @@
-import React from 'react';
 import { useCallback, useState } from 'react';
 import SearchBar from '../components/SearchBar';
 import Collections from '../components/Collections';
@@ -23,13 +22,13 @@ export default function Home() {
       alert(reason);
     })
     .finally(() => setIsLoading(false));
-
   }, []);
   
   return (
     <main className="m-6">
+      <div>learn</div>
       <SearchBar onSearch={handleSearch} />
-      <Collections collections={collections} />
+      <Collections  data-testid="collections" collections={collections} />
        {isLoading && <Spinner isLoading={isLoading}/>}
     </main>
   );
